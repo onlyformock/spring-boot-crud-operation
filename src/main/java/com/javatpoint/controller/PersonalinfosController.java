@@ -22,15 +22,15 @@ private List<Personalinfos> getAllPersonalinfos()
 return personalinfosService.getAllPersonalinfos();
 }
 //creating a get mapping that retrieves the detail of a specific pinfo
-@GetMapping("/personalinfo/{phonenoid}")
-private Personalinfos getPersonalinfos(@PathVariable("phonenoid") long phonenoid)
+@GetMapping("/personalinfo/{policynoid}")
+private Personalinfos getPersonalinfos(@PathVariable("policynoid") String policynoid)
 {
-return personalinfosService.getPersonalinfosById(phonenoid);
+return personalinfosService.getPersonalinfosById(policynoid);
 }
 @PostMapping("/personalinfos")
-private long savePersonalinfo(@RequestBody Personalinfos personalinfos)
+private String savePersonalinfo(@RequestBody Personalinfos personalinfos)
 {
 personalinfosService.saveOrUpdate(personalinfos);
-return personalinfos.getPhonenoid();
+return personalinfos.getPolicynoid();
 }
 }
