@@ -9,16 +9,17 @@ import javax.persistence.Table;
 //defining class name as Table name
 @Table
 public class Personalinfos {
-//Defining phoneno id as primary key
+//Defining policyno id as primary key
 @Id
 @Column
-private long phonenoid;
+private String policynoid;
 
-
+@Column
+private long phoneno;
 @Column
 private String name;
 @Column
-private String DOB;
+private String dob;
 @Column
 private String product;
 @Column
@@ -42,20 +43,33 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-public long getPhonenoid() {
-	return phonenoid;
+
+
+
+
+
+public String getPolicynoid() {
+	return policynoid;
 }
 
-public void setPhonenoid(long phonenoid) {
-	this.phonenoid = phonenoid;
+public void setPolicynoid(String policynoid) {
+	this.policynoid = policynoid;
 }
 
-public String getDOB() {
-	return DOB;
+public long getPhoneno() {
+	return phoneno;
 }
 
-public void setDOB(String dOB) {
-	DOB = dOB;
+public void setPhoneno(long phoneno) {
+	this.phoneno = phoneno;
+}
+
+public String getDob() {
+	return dob;
+}
+
+public void setDob(String dob) {
+	this.dob = dob;
 }
 
 public String getProduct() {

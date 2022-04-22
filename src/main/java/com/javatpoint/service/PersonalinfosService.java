@@ -21,7 +21,7 @@ personalinfosRepository.findAll().forEach(personalinfos1 -> personalinfos.add(pe
 return personalinfos;
 }
 //getting a specific record by using the method findById() of CrudRepository
-public Personalinfos getPersonalinfosById(long id) 
+public Personalinfos getPersonalinfosById(String id) 
 {
 return personalinfosRepository.findById(id).get();
 }
