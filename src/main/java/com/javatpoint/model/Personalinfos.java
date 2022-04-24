@@ -36,6 +36,11 @@ private String plan;
 private String term;
 @Column
 private String state;
+@Column
+private String quotationamount;
+@Column
+private String phonenumber;
+ 
 public String getName() {
 	return name;
 }
@@ -43,9 +48,6 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-
-
-
 
 
 public String getPolicynoid() {
@@ -134,7 +136,21 @@ public String getState() {
 }
 
 public void setState(String state) {
-	this.state = state;
+	this.state   = state;
+}
+public String getQuotationamount  () {
+	return quotationamount  ;
+}
+
+public void setQuotationamount  (String quotationamount  ) {
+	this.quotationamount   = quotationamount  ;
+}
+public String getPhonenumber   () {
+	return phonenumber  ;
+}
+
+public void setPhonenumber   (String phonenumber   ) {
+	this.phonenumber    = phonenumber   ;
 }
 
 
